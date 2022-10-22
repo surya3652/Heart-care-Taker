@@ -1,0 +1,103 @@
+body{
+    background-image: url(Med-background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#img{
+	width:100%;
+	border-width: 10px;
+	border-style:ridge;
+	border-color:#FF1E00;
+	border-radius: 5px;
+}
+hr{
+    border-style:dashed;
+    border-width: 20px;
+    width:100%;
+}
+.black{
+	
+	border-width: 15px;
+	border-style:groove;
+	border-color:#9CFF2E;
+	text-align: center;
+	color: #ffffff;
+	background-color: rgba(0,0,0,.75);
+	padding:10px 50px 20px 50px;
+	border-radius: 30px;
+}
+.regform {
+    width: 80%;
+    background-color: rgba(78, 133, 98, 0.8);
+    margin: auto;
+    color: #0f0f0f;
+    padding: 0 0px 10px 0px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+
+}
+
+.main-form {
+    width: 80%;
+    margin:auto;
+    background-color: rgb(0, 0, 0, 0.7);
+    padding:0 50px 20px 50px;
+    border-radius: 0px 0px 15px 15px;
+    color: #FFFFFF;
+}
+.nav-text{
+    -webkit-text-fill-color:darkorange;
+}
+.headstyle {
+    color: rgb(255, 255, 255);
+    font-variant: petite-caps;
+    background-color: rgb(0, 0, 0, 0.8);
+    margin-bottom: 0px
+}
+.divstyle {
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+#features{
+    text-align: center;
+    padding:0 10px 0px 10px;
+}
+
+.card-header{
+    background-color:#B4CDE6;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+table {
+  background: #012B39;
+  border-radius: 20px;
+  border-collapse: collapse;
+  width:100%;
+}
+th{
+  border-bottom: 1px solid #364043;
+  color: #E2B842;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+td {
+  color: #fff;
+  font-weight: 400;
+  padding: 0.65em 1em;
+}
+tbody tr {
+  transition: background 0.25s ease;
+}
+tbody tr:hover {
+  background: #014055;
+}

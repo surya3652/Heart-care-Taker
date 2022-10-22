@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" href="static\Favicon.png">
+    <link rel="stylesheet" href="static\styleForFeatures.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+        <title>HCT</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="margin-bottom:0px;background-color: #06283D;font-weight: bolder;">
+        <div class="container-fluid">
+            <a class="navbar-brand"  href="/">
+                <img src="static\Logo.png" style="width: 200px;height: 50px;border-radius: 15px;" alt="img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-text" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text" aria-current="page" href="/heartdisease">Predict</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text" aria-current="page" href="/featurespage">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text" aria-current="page" href="/googleform">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
+
+<div style="padding-top:5px;"></div>
+<div class="container">
+    <div class="row black">
+        <div class="col col-lg-12 col-sm-12 col-md-12">
+            <h1 style="color:#2192FF;">Thalassemia</h1>
+        </div>
+        <div class="col col-lg-12 col-sm-12 col-md-12">
+            <p>Thalassemia is an inherited blood disorder that causes your body to have less hemoglobin than normal. Hemoglobin enables red blood cells to carry oxygen. Thalassemia can cause anemia.</p>
+            <h3>Thalassemia Type graph</h3>
+            
+            <img id="img" src="static\thal_pic1.png"></img>
+            <br>
+            <p>In The Above Graph the numbers Represents:</p>
+            <p>0 = Safe </p>
+            <p>1 = fixed defect (no blood flow in some part of the heart)</p>
+            <p>2 = normal blood flow</p>
+            <p>3 = reversible defect (a blood flow is observed but it is not normal)</p>
+            <hr>
+        </div>
+        <div class="col col-lg-12 col-sm-12 col-md-12">
+            <h3>Thalassemia Type graph Based on Target</h3>
+            <img id="img" src="static\thal_pic2.png"></img>
+            <br>
+            <p>People with normal blood flow i.e. thal value '2' are more likely to have heart disease.</p>
+        <hr>
+        </div>
+        </div>
+</div>
+</div>
+<div style="padding-bottom:5px;"></div>
+
+</html>
