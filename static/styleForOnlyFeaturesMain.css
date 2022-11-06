@@ -28,4 +28,7 @@
 }
 body {
     background-image: repeating-radial-gradient(#38E54D, #9CFF2E 25%, #FDFF00 25%);
+      margin:0;
+      padding:0;
+      overflow-x:hidden;
   }
