@@ -10,6 +10,11 @@ body{
     background-color: rgb(0, 0, 0, 0.8);
     margin-bottom: 0px
 }
+@media(max-width: 767px) {
+    .container {
+        width: auto;
+    }
+}
 .nav-text{
     -webkit-text-fill-color:darkorange;
 }
