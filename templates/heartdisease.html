@@ -78,15 +78,15 @@
         
             <div class="row">
                 <div class='form-group'>
-                <label for="op">Old Peak</label>
-                <input type="number" step='any' required='True' name='op' id='op' class='form-control'>
+                <label for="op">Old Peak(ECG values)</label>
+                <input type="number" step='any' required='True' name='op' id='op' class='form-control' min="0" max="6">
                 </div>
             </div>
 
             <div class="row">
                 <div class='form-group'>
                 <label for="mhra">Max. Heart Rate achieved</label>
-                <input type='number' step="any" required='True' name='mhra' id='mhra' class='form-control'>
+                <input type='number' step="any" required='True' name='mhra' id='mhra' class='form-control' min="40" max="300">
             </div>
         </div>
 
@@ -130,7 +130,7 @@
             <div class="row">
                 <div class='form-group'>
                 <label for="age">Age</label>
-                <input type="number" name="age" id="age" class="form-control" required='True'>
+                <input type="number" name="age" id="age" class="form-control" required='True' min="10" max="122">
             </div>
         </div>
 
