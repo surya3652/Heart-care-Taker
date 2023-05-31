@@ -21,7 +21,6 @@ pyparsing==3.0.9
 python-dateutil==2.8.2
 pytz==2023.3
 scikit-learn==1.2.2
-GCC runtime library==1.10.1
 six==1.16.0
 sklearn==0.0.post5
 threadpoolctl==3.1.0
