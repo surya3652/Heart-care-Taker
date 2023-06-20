@@ -28,7 +28,7 @@ print(accuracy_score(y_test,y_pred))
 # Confusion Matrix
 cm = confusion_matrix(y_test,y_pred)
 
-# Saving the model
+# Fitting the model with desired parameters
 heart_model.fit(df[["ca", "cp", "exang", "thal", "oldpeak", "thalach", "age"]],df.target)
 
 # Saving the model
