@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 # Loading Models
-heart_model = pickle.load(open('models/heart_disease.pickle.dat', "rb"))
+heart_model = pickle.load(open('models/heart_model.dat', "rb"))
 
 
 app = Flask(__name__)
@@ -58,14 +58,14 @@ def resulth():
         firstname = request.form['firstname']
         lastname = request.form['lastname']
         gender = request.form['gender']
-        op = float(request.form['op'])
-        mhra = float(request.form['mhra'])
-        eia = float(request.form['eia'])
-        nmv = float(request.form['nmv'])
-        tcp = float(request.form['tcp'])
-        age = float(request.form['age'])
-        thal = float(request.form['thal'])
-        pred = heart_model.predict(np.array([nmv, tcp, eia, thal, op, mhra, age]).reshape(1, -1))
+        ca = request.form['nmv']
+        cp = request.form['tcp']
+        exang = request.form['eia']
+        thal = request.form['thal']
+        oldpeak = request.form['op']
+        thalach = request.form['mhra']
+        age = request.form['age']
+        pred = heart_model.predict(np.array([ca, cp, exang, thal, oldpeak, thalach, age]).reshape(1, -1))
         return render_template('resulth.html', fn=firstname, ln=lastname, age=age, r=pred, gender=gender)
 
 
