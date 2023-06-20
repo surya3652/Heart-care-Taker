@@ -1,22 +1,13 @@
 from flask import Flask, flash, request, redirect, url_for, render_template
 import pickle
-# from pushbullet import PushBullet
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 # Loading Models
 heart_model = pickle.load(open('models/heart_disease.pickle.dat', "rb"))
-# Configuring Flask
-UPLOAD_FOLDER = 'static/uploads'
-ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
+
 
 app = Flask(__name__)
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.secret_key = "secret key"
-
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 ########################### Routing Functions ########################################
 
 @app.route('/')
@@ -67,29 +58,16 @@ def resulth():
         firstname = request.form['firstname']
         lastname = request.form['lastname']
         gender = request.form['gender']
-        nmv = float(request.form['nmv'])
-        tcp = float(request.form['tcp'])
-        eia = float(request.form['eia'])
-        thal = float(request.form['thal'])
         op = float(request.form['op'])
         mhra = float(request.form['mhra'])
+        eia = float(request.form['eia'])
+        nmv = float(request.form['nmv'])
+        tcp = float(request.form['tcp'])
         age = float(request.form['age'])
-        print(np.array([nmv, tcp, eia, thal, op, mhra, age]).reshape(1, -1))
+        thal = float(request.form['thal'])
         pred = heart_model.predict(np.array([nmv, tcp, eia, thal, op, mhra, age]).reshape(1, -1))
-        # pb.push_sms(pb.devices[0],str(phone), 'Hello {},\nYour Diabetes test results are ready.\nRESULT: {}'.format(firstname,['NEGATIVE','POSITIVE'][pred]))
         return render_template('resulth.html', fn=firstname, ln=lastname, age=age, r=pred, gender=gender)
 
-
-# No caching at all for API endpoints.
-@app.after_request
-def add_header(response):
-    """
-    Add headers to both force latest IE rendering engine or Chrome Frame,
-    and also to cache the rendered page for 10 minutes.
-    """
-    response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
-    response.headers['Cache-Control'] = 'public, max-age=0'
-    return response
 
 if __name__ == '__main__':
     app.run(debug=True)
