@@ -16,7 +16,7 @@ x = df.drop('target',axis = 1)
 y = df['target']
 
 #Training the model
-x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=49)
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.50,random_state = 60)
 heart_model.fit(x_train,y_train)
 
 # Loading the Model
