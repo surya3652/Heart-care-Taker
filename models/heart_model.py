@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 heart_model = RandomForestClassifier()
 
 # Loading Dataset
-df = pd.read_csv("F:\Files\BTECH\Projects\MINI_PROJECT\Proj\heart.csv")
+df = pd.read_csv("../../heart.csv")
 
 # Data Preprocessing
 x = df.drop('target',axis = 1)
